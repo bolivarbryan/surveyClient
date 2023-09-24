@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		611F78692AC0CC9A009BF3E8 /* SurveyClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611F78682AC0CC9A009BF3E8 /* SurveyClientTests.swift */; };
 		611F78732AC0CC9A009BF3E8 /* SurveyClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611F78722AC0CC9A009BF3E8 /* SurveyClientUITests.swift */; };
 		611F78752AC0CC9A009BF3E8 /* SurveyClientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611F78742AC0CC9A009BF3E8 /* SurveyClientUITestsLaunchTests.swift */; };
+		611F788E2AC0D2E4009BF3E8 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 611F788D2AC0D2E4009BF3E8 /* API */; };
+		611F78912AC0D313009BF3E8 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 611F78902AC0D313009BF3E8 /* Core */; };
+		611F78942AC0D368009BF3E8 /* Style in Frameworks */ = {isa = PBXBuildFile; productRef = 611F78932AC0D368009BF3E8 /* Style */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +52,6 @@
 		611F786E2AC0CC9A009BF3E8 /* SurveyClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		611F78722AC0CC9A009BF3E8 /* SurveyClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyClientUITests.swift; sourceTree = "<group>"; };
 		611F78742AC0CC9A009BF3E8 /* SurveyClientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyClientUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		611F78812AC0CE41009BF3E8 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611F78942AC0D368009BF3E8 /* Style in Frameworks */,
+				611F788E2AC0D2E4009BF3E8 /* API in Frameworks */,
+				611F78912AC0D313009BF3E8 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,11 +85,11 @@
 		611F78452AC0CC97009BF3E8 = {
 			isa = PBXGroup;
 			children = (
-				611F78812AC0CE41009BF3E8 /* Core */,
 				611F78502AC0CC97009BF3E8 /* SurveyClient */,
 				611F78672AC0CC9A009BF3E8 /* SurveyClientTests */,
 				611F78712AC0CC9A009BF3E8 /* SurveyClientUITests */,
 				611F784F2AC0CC97009BF3E8 /* Products */,
+				611F78892AC0D2C9009BF3E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +134,13 @@
 			path = SurveyClientUITests;
 			sourceTree = "<group>";
 		};
+		611F78892AC0D2C9009BF3E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +157,11 @@
 			dependencies = (
 			);
 			name = SurveyClient;
+			packageProductDependencies = (
+				611F788D2AC0D2E4009BF3E8 /* API */,
+				611F78902AC0D313009BF3E8 /* Core */,
+				611F78932AC0D368009BF3E8 /* Style */,
+			);
 			productName = SurveyClient;
 			productReference = 611F784E2AC0CC97009BF3E8 /* SurveyClient.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +234,11 @@
 				Base,
 			);
 			mainGroup = 611F78452AC0CC97009BF3E8;
+			packageReferences = (
+				611F788C2AC0D2E4009BF3E8 /* XCLocalSwiftPackageReference "API" */,
+				611F788F2AC0D313009BF3E8 /* XCLocalSwiftPackageReference "Core" */,
+				611F78922AC0D368009BF3E8 /* XCLocalSwiftPackageReference "Style" */,
+			);
 			productRefGroup = 611F784F2AC0CC97009BF3E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -611,6 +633,36 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		611F788C2AC0D2E4009BF3E8 /* XCLocalSwiftPackageReference "API" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = API;
+		};
+		611F788F2AC0D313009BF3E8 /* XCLocalSwiftPackageReference "Core" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Core;
+		};
+		611F78922AC0D368009BF3E8 /* XCLocalSwiftPackageReference "Style" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Style;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		611F788D2AC0D2E4009BF3E8 /* API */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = API;
+		};
+		611F78902AC0D313009BF3E8 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		611F78932AC0D368009BF3E8 /* Style */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Style;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 611F78462AC0CC97009BF3E8 /* Project object */;
 }
