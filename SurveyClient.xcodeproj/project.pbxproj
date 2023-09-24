@@ -49,6 +49,7 @@
 		611F786E2AC0CC9A009BF3E8 /* SurveyClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		611F78722AC0CC9A009BF3E8 /* SurveyClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyClientUITests.swift; sourceTree = "<group>"; };
 		611F78742AC0CC9A009BF3E8 /* SurveyClientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyClientUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		611F78812AC0CE41009BF3E8 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		611F78452AC0CC97009BF3E8 = {
 			isa = PBXGroup;
 			children = (
+				611F78812AC0CE41009BF3E8 /* Core */,
 				611F78502AC0CC97009BF3E8 /* SurveyClient */,
 				611F78672AC0CC9A009BF3E8 /* SurveyClientTests */,
 				611F78712AC0CC9A009BF3E8 /* SurveyClientUITests */,
