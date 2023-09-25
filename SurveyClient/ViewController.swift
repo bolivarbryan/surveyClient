@@ -14,12 +14,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        Core().printTest()
-        API().printTest()
-        Style().printTest()
+        
+        APIProvider.request(service: .register(email: "bryan+1@coderlabs.co",
+                                                  name: "Bryan",
+                                                  password: "12345678",
+                                                  passwordConfirmation: "12345678")) { data in
+            DispatchQueue.main.async {
+                print(data)
+            }
+        }
     }
-
-
 }
-
