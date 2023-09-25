@@ -16,9 +16,10 @@
 		611F78692AC0CC9A009BF3E8 /* SurveyClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611F78682AC0CC9A009BF3E8 /* SurveyClientTests.swift */; };
 		611F78732AC0CC9A009BF3E8 /* SurveyClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611F78722AC0CC9A009BF3E8 /* SurveyClientUITests.swift */; };
 		611F78752AC0CC9A009BF3E8 /* SurveyClientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611F78742AC0CC9A009BF3E8 /* SurveyClientUITestsLaunchTests.swift */; };
-		611F788E2AC0D2E4009BF3E8 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 611F788D2AC0D2E4009BF3E8 /* API */; };
-		611F78912AC0D313009BF3E8 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 611F78902AC0D313009BF3E8 /* Core */; };
 		611F78942AC0D368009BF3E8 /* Style in Frameworks */ = {isa = PBXBuildFile; productRef = 611F78932AC0D368009BF3E8 /* Style */; };
+		616E8FC72AC1169B00C3F5F6 /* API in Resources */ = {isa = PBXBuildFile; fileRef = 616E8FC62AC1169B00C3F5F6 /* API */; };
+		616E8FC92AC116DE00C3F5F6 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 616E8FC82AC116DE00C3F5F6 /* API */; };
+		616E8FCC2AC1DC9D00C3F5F6 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 616E8FCB2AC1DC9D00C3F5F6 /* Core */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		611F786E2AC0CC9A009BF3E8 /* SurveyClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		611F78722AC0CC9A009BF3E8 /* SurveyClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyClientUITests.swift; sourceTree = "<group>"; };
 		611F78742AC0CC9A009BF3E8 /* SurveyClientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyClientUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		616E8FC62AC1169B00C3F5F6 /* API */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = API; sourceTree = "<group>"; };
+		616E8FCA2AC1DC8E00C3F5F6 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				616E8FC92AC116DE00C3F5F6 /* API in Frameworks */,
 				611F78942AC0D368009BF3E8 /* Style in Frameworks */,
-				611F788E2AC0D2E4009BF3E8 /* API in Frameworks */,
-				611F78912AC0D313009BF3E8 /* Core in Frameworks */,
+				616E8FCC2AC1DC9D00C3F5F6 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,8 @@
 		611F78452AC0CC97009BF3E8 = {
 			isa = PBXGroup;
 			children = (
+				616E8FCA2AC1DC8E00C3F5F6 /* Core */,
+				616E8FC62AC1169B00C3F5F6 /* API */,
 				611F78502AC0CC97009BF3E8 /* SurveyClient */,
 				611F78672AC0CC9A009BF3E8 /* SurveyClientTests */,
 				611F78712AC0CC9A009BF3E8 /* SurveyClientUITests */,
@@ -158,9 +163,9 @@
 			);
 			name = SurveyClient;
 			packageProductDependencies = (
-				611F788D2AC0D2E4009BF3E8 /* API */,
-				611F78902AC0D313009BF3E8 /* Core */,
 				611F78932AC0D368009BF3E8 /* Style */,
+				616E8FC82AC116DE00C3F5F6 /* API */,
+				616E8FCB2AC1DC9D00C3F5F6 /* Core */,
 			);
 			productName = SurveyClient;
 			productReference = 611F784E2AC0CC97009BF3E8 /* SurveyClient.app */;
@@ -235,8 +240,6 @@
 			);
 			mainGroup = 611F78452AC0CC97009BF3E8;
 			packageReferences = (
-				611F788C2AC0D2E4009BF3E8 /* XCLocalSwiftPackageReference "API" */,
-				611F788F2AC0D313009BF3E8 /* XCLocalSwiftPackageReference "Core" */,
 				611F78922AC0D368009BF3E8 /* XCLocalSwiftPackageReference "Style" */,
 			);
 			productRefGroup = 611F784F2AC0CC97009BF3E8 /* Products */;
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				611F785E2AC0CC9A009BF3E8 /* LaunchScreen.storyboard in Resources */,
+				616E8FC72AC1169B00C3F5F6 /* API in Resources */,
 				611F785B2AC0CC9A009BF3E8 /* Assets.xcassets in Resources */,
 				611F78592AC0CC98009BF3E8 /* Main.storyboard in Resources */,
 			);
@@ -635,14 +639,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		611F788C2AC0D2E4009BF3E8 /* XCLocalSwiftPackageReference "API" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = API;
-		};
-		611F788F2AC0D313009BF3E8 /* XCLocalSwiftPackageReference "Core" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Core;
-		};
 		611F78922AC0D368009BF3E8 /* XCLocalSwiftPackageReference "Style" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Style;
@@ -650,17 +646,17 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		611F788D2AC0D2E4009BF3E8 /* API */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = API;
-		};
-		611F78902AC0D313009BF3E8 /* Core */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Core;
-		};
 		611F78932AC0D368009BF3E8 /* Style */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Style;
+		};
+		616E8FC82AC116DE00C3F5F6 /* API */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = API;
+		};
+		616E8FCB2AC1DC9D00C3F5F6 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
