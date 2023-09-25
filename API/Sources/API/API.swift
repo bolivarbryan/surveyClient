@@ -87,6 +87,7 @@ extension NimbleAPI: TargetType {
         case .surveyDetails:
             return .requestPlain
         case .surveyList(page: let page):
+            //return .requestPlain
             return .requestParameters(parameters: ["page[number]": "\(page)", "page[size]": "2"], encoding: URLEncoding.default)
         case .userProfile:
             return .requestPlain
@@ -105,37 +106,13 @@ extension NimbleAPI: TargetType {
     
     public var headers: [String: String]? {
         switch self {
-        case .register:
+        case .register, .loginWithEmail, .refreshToken, .logout, .forgotPassword:
             return [
                 "Content-Type": "application/json"
             ]
-        case .loginWithEmail:
+        case .surveyList, .surveyDetails, .userProfile:
             return [
-                "Content-Type": "application/json"
-            ]
-        case .refreshToken:
-            return [
-                "Content-Type": "application/json"
-            ]
-        case .logout:
-            return [
-                "Content-Type": "application/json"
-            ]
-        case .forgotPassword:
-            return [
-                "Content-Type": "application/json"
-            ]
-        case .surveyList:
-            return [
-                "Authorization": "\(TokenType.fetch()) \(AccessToken.fetch()))"
-            ]
-        case .surveyDetails:
-            return [
-                "Authorization": "\(TokenType.fetch()) \(AccessToken.fetch()))"
-            ]
-        case .userProfile:
-            return [
-                "Authorization": "\(TokenType.fetch()) \(AccessToken.fetch()))"
+                "Authorization": "\(TokenType.fetch()) \(AccessToken.fetch())"
             ]
         }
     }

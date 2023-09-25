@@ -10,9 +10,7 @@ import Moya
 
 public struct APIProvider {
     
-    private static func storeAccessToken(token: String) {
-        
-    }
+    private static func storeAccessToken(token: String) { }
     
     public static func request(service: NimbleAPI, completion: @escaping (Data) -> Void) {
         let provider = MoyaProvider<NimbleAPI>()
@@ -27,36 +25,5 @@ public struct APIProvider {
                 print(error.localizedDescription)
             }
         }
-    }
-}
-
-
-protocol Storage {
-    static func save(_ value: String)
-    static func fetch() -> String
-}
-
-struct AccessToken: Storage {
-    private static let tokenKey = "user_access_token"
-    
-    static func save(_ value: String) {
-        UserDefaults.standard.setValue(value, forKey: tokenKey)
-    }
-    
-    static func fetch() -> String {
-        UserDefaults.standard.string(forKey: tokenKey) ?? ""
-    }
-}
-
-
-struct TokenType: Storage {
-    private static let tokenKey = "user_token_type"
-    
-    static func save(_ value: String) {
-        UserDefaults.standard.setValue(value, forKey: tokenKey)
-    }
-    
-    static func fetch() -> String {
-        UserDefaults.standard.string(forKey: tokenKey) ?? ""
     }
 }
