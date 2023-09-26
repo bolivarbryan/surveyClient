@@ -102,3 +102,12 @@ The `Language` struct contains nested structs for different sections of the app.
 
 ### Home
 - `dayFormat`: A string representing the format for displaying the current date on the home screen.
+
+
+# Nice Features to add soon
+- Increasing Coverage from 0 to 50% in each module
+- Add loading indicator for bad network
+- Lock sign in button once while it is processing
+- Add pull down to refresh on home screen
+- A Survey details screen once surve action happens on home
+
