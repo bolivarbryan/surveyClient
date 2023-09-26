@@ -13,8 +13,8 @@ public enum NimbleAPI {
     case surveyDetails(surveyID: String)
     case userProfile
     
-    private var clientID: String { "6GbE8dhoz519l2N_F99StqoOs6Tcmm1rXgda4q__rIw" }
-    private var clientSecret: String { "_ayfIm7BeUAhx2W1OUqi20fwO3uNxfo1QstyKlFCgHw" }
+    private var clientID: String { "" }
+    private var clientSecret: String { "" }
 }
 
 extension NimbleAPI: TargetType {
