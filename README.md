@@ -14,6 +14,17 @@ https://github.com/bolivarbryan/surveyClient/assets/810092/2c6f4cf5-66ab-4255-ba
 
 This is a Swift file that defines an enum `NimbleAPI`, which contains various cases representing different API endpoints. This enum conforms to the `TargetType` protocol from the `Moya` library, which is used for defining network requests.
 
+
+## IMPORTANT
+
+⚠️ you must provide client id and secret on API package in order to make it work
+
+```swift
+    private var clientID: String { "" }
+    private var clientSecret: String { "" }
+```
+
+
 ### Usage
 
 To use this API, you can create an instance of `NimbleAPI` and pass it to a `MoyaProvider` to make network requests. For example, you can do the following:
