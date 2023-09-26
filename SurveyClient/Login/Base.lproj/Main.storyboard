@@ -38,17 +38,17 @@
                     </view>
                     <connections>
                         <outlet property="stackView" destination="VTu-RD-CpA" id="pQV-Yi-w8E"/>
-                        <segue destination="3ar-cm-qf3" kind="presentation" identifier="HomeSegue" id="NeD-Jq-og5"/>
+                        <segue destination="3ar-cm-qf3" kind="presentation" identifier="HomeSegue" modalPresentationStyle="fullScreen" id="NeD-Jq-og5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-253" y="1"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--HomeStoryboard-->
         <scene sceneID="mRN-aj-Rtn">
             <objects>
-                <viewControllerPlaceholder id="3ar-cm-qf3" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="HomeStoryboard" id="3ar-cm-qf3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pg5-4V-Ril" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="564" y="-170"/>

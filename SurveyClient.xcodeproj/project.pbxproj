@@ -23,6 +23,9 @@
 		616E8FE82AC23CC700C3F5F6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E8FE72AC23CC700C3F5F6 /* LoginViewModel.swift */; };
 		616E8FEB2AC2422000C3F5F6 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 616E8FEA2AC2422000C3F5F6 /* HomeStoryboard.storyboard */; };
 		61EBF4002AC266D30045CEA4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EBF3FF2AC266D30045CEA4 /* HomeViewController.swift */; };
+		61EBF4042AC269970045CEA4 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EBF4032AC269970045CEA4 /* HomeCollectionViewCell.swift */; };
+		61EBF4072AC26D740045CEA4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 61EBF4062AC26D740045CEA4 /* Kingfisher */; };
+		61EBF4092AC26E4E0045CEA4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EBF4082AC26E4E0045CEA4 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +61,12 @@
 		611F78742AC0CC9A009BF3E8 /* SurveyClientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyClientUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		616E8FDC2AC22A5A00C3F5F6 /* API */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = API; sourceTree = "<group>"; };
 		616E8FDD2AC22A6600C3F5F6 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
-		616E8FDF2AC22B0000C3F5F6 /* Style */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Style; sourceTree = "<group>"; };
 		616E8FE72AC23CC700C3F5F6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		616E8FEA2AC2422000C3F5F6 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		61EBF3FF2AC266D30045CEA4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		61EBF4012AC268A40045CEA4 /* Style */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Style; sourceTree = "<group>"; };
+		61EBF4032AC269970045CEA4 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		61EBF4082AC26E4E0045CEA4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +78,7 @@
 				616E8FE52AC2311200C3F5F6 /* SnapKit in Frameworks */,
 				616E8FC92AC116DE00C3F5F6 /* API in Frameworks */,
 				616E8FCC2AC1DC9D00C3F5F6 /* Core in Frameworks */,
+				61EBF4072AC26D740045CEA4 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +102,7 @@
 		611F78452AC0CC97009BF3E8 = {
 			isa = PBXGroup;
 			children = (
-				616E8FDF2AC22B0000C3F5F6 /* Style */,
+				61EBF4012AC268A40045CEA4 /* Style */,
 				616E8FDD2AC22A6600C3F5F6 /* Core */,
 				616E8FDC2AC22A5A00C3F5F6 /* API */,
 				611F78502AC0CC97009BF3E8 /* SurveyClient */,
@@ -168,10 +174,20 @@
 		616E8FE92AC2420E00C3F5F6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				61EBF4022AC2697E0045CEA4 /* Views */,
 				616E8FEA2AC2422000C3F5F6 /* HomeStoryboard.storyboard */,
 				61EBF3FF2AC266D30045CEA4 /* HomeViewController.swift */,
+				61EBF4082AC26E4E0045CEA4 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		61EBF4022AC2697E0045CEA4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				61EBF4032AC269970045CEA4 /* HomeCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +211,7 @@
 				616E8FCB2AC1DC9D00C3F5F6 /* Core */,
 				616E8FE02AC22B0900C3F5F6 /* Style */,
 				616E8FE42AC2311200C3F5F6 /* SnapKit */,
+				61EBF4062AC26D740045CEA4 /* Kingfisher */,
 			);
 			productName = SurveyClient;
 			productReference = 611F784E2AC0CC97009BF3E8 /* SurveyClient.app */;
@@ -270,6 +287,7 @@
 			mainGroup = 611F78452AC0CC97009BF3E8;
 			packageReferences = (
 				616E8FE32AC2311200C3F5F6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				61EBF4052AC26D740045CEA4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 611F784F2AC0CC97009BF3E8 /* Products */;
 			projectDirPath = "";
@@ -317,9 +335,11 @@
 			files = (
 				61EBF4002AC266D30045CEA4 /* HomeViewController.swift in Sources */,
 				616E8FE82AC23CC700C3F5F6 /* LoginViewModel.swift in Sources */,
+				61EBF4092AC26E4E0045CEA4 /* HomeViewModel.swift in Sources */,
 				611F78562AC0CC97009BF3E8 /* ViewController.swift in Sources */,
 				611F78522AC0CC97009BF3E8 /* AppDelegate.swift in Sources */,
 				611F78542AC0CC97009BF3E8 /* SceneDelegate.swift in Sources */,
+				61EBF4042AC269970045CEA4 /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +696,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		61EBF4052AC26D740045CEA4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -695,6 +723,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 616E8FE32AC2311200C3F5F6 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		61EBF4062AC26D740045CEA4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61EBF4052AC26D740045CEA4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
