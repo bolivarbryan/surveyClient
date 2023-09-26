@@ -48,7 +48,6 @@ class HomeViewModel {
     var didFailLoading: (() -> Void)?
     var didLoadEmptySurveys: (() -> Void)?
     var didLoadUserProfile: (() -> Void)?
-
     
     func fetchSurveys() {
         state = .loading

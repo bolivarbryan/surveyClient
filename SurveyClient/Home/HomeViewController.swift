@@ -34,10 +34,8 @@ class HomeViewController: UIViewController {
         return pageControl
     }()
     
-    
     let surveyTitleLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.text = "Working from home Check-In"
         label.numberOfLines = 0
         label.textColor = ColorStyle.white
         label.font = FontStyle.display28
@@ -49,7 +47,6 @@ class HomeViewController: UIViewController {
         label.numberOfLines = 2
         label.textColor = ColorStyle.white
         label.font = FontStyle.regular17
-        label.text = "We would like to know how you feel about our work from home..."
         return label
     }()
     
@@ -173,6 +170,9 @@ extension HomeViewController: UIScrollViewDelegate, UICollectionViewDelegate {
         if let ip = collectionView.indexPathForItem(at: center) {
              self.pageControl.currentPage = ip.row
          }
+        
+        surveyTitleLabel.text = viewModel.surveys[self.pageControl.currentPage].title
+        surveyDescriptionLabel.text = viewModel.surveys[self.pageControl.currentPage].description
     }
 }
 
