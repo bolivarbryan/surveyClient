@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Bryan A Bolivar M on 25/09/23.
-//
-
 import Foundation
 
 //MARK: - Session Model
