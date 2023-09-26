@@ -1,25 +1,59 @@
 //
-//  ViewController.swift
+//  LoginViewModel.swift
 //  SurveyClient
 //
-//  Created by Bryan A Bolivar M on 24/09/23.
+//  Created by Bryan A Bolivar M on 25/09/23.
 //
 
-import UIKit
-import Core
-import Style
+import Foundation
 import API
+import Core
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        signIn()
+class LoginViewModel {
+    enum State {
+        case idle
+        case editing
+        case processingLogin
+        case errorLogin
+        case successfulLogin
     }
     
-    func signIn() {
-        APIProvider.request(service: .loginWithEmail(email: "bolivarbryan@gmail.com",
-                                                     password: "12345678")) { data in
+    var state: State = .idle {
+        didSet {
+            switch state {
+            case .idle:
+                break
+            case .editing:
+                if let response = self.didStartEditing {
+                    response()
+                }
+            case .processingLogin:
+                if let response = self.didStartProccessing {
+                    response()
+                }
+            case .errorLogin:
+                if let response = self.didFailLogin {
+                    response()
+                }
+            case .successfulLogin:
+                if let response = self.didSignInSuccessfully {
+                    response()
+                }
+            }
+        }
+    }
+    
+    var email: String = ""
+    var password: String = ""
+    
+    var didSignInSuccessfully: (() -> Void)?
+    var didStartEditing: (() -> Void)?
+    var didStartProccessing: (() -> Void)?
+    var didFailLogin: (() -> Void)?
+    
+    func performLogin() {
+        state = .processingLogin
+        APIProvider.request(service: .loginWithEmail(email: email, password: password)) { data in
             DispatchQueue.main.async {
                 do {
                     let session = try JSONDecoder().decode(SessionResponse.self, from: data)
@@ -27,9 +61,10 @@ class ViewController: UIViewController {
                     AccessToken.save(session.session.accessToken)
                     TokenType.save(session.session.tokenType)
                     RefreshToken.save(session.session.refreshToken)
-                    self.surveyList()
+                    self.state = .successfulLogin
                 } catch {
                     print(error.localizedDescription)
+                    self.state = .errorLogin
                 }
             }
         }
