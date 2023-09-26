@@ -68,6 +68,11 @@ class HomeViewController: UIViewController {
             self.profileImageView.kf.setImage(with: URL(string: self.viewModel.user?.avatarURL ?? ""))
         }
         
+        viewModel.didLoadPage = { survey in
+            self.surveyTitleLabel.text = survey.title
+            self.surveyDescriptionLabel.text = survey.description
+        }
+        
         addHeaderSection()
         addFooterSection()
         viewModel.fetchUserProfile()
@@ -107,7 +112,6 @@ class HomeViewController: UIViewController {
         hstack.addArrangedSubview(UIView())
         hstack.addArrangedSubview(profileImageView)
         vStack.addArrangedSubview(hstack)
-
     }
     
     func addFooterSection() {
@@ -165,14 +169,14 @@ extension HomeViewController: UICollectionViewDataSource {
 extension HomeViewController: UIScrollViewDelegate, UICollectionViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let xPoint = scrollView.contentOffset.x + scrollView.frame.width / 2
-         let yPoint = scrollView.frame.height / 2
-         let center = CGPoint(x: xPoint, y: yPoint)
-        if let ip = collectionView.indexPathForItem(at: center) {
-             self.pageControl.currentPage = ip.row
-         }
+        let yPoint = scrollView.frame.height / 2
+        let center = CGPoint(x: xPoint, y: yPoint)
         
-        surveyTitleLabel.text = viewModel.surveys[self.pageControl.currentPage].title
-        surveyDescriptionLabel.text = viewModel.surveys[self.pageControl.currentPage].description
+        if let ip = collectionView.indexPathForItem(at: center) {
+            self.pageControl.currentPage = ip.row
+        }
+        
+        viewModel.visibleSurvey = viewModel.surveys[self.pageControl.currentPage]
     }
 }
 

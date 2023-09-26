@@ -48,6 +48,16 @@ class HomeViewModel {
     var didFailLoading: (() -> Void)?
     var didLoadEmptySurveys: (() -> Void)?
     var didLoadUserProfile: (() -> Void)?
+    var didLoadPage: ((Survey) -> Void)?
+    
+    var visibleSurvey: Survey? {
+        didSet {
+            guard let survey = visibleSurvey else { return }
+            if let response = self.didLoadPage {
+                response(survey)
+            }
+        }
+    }
     
     func fetchSurveys() {
         state = .loading
@@ -57,6 +67,7 @@ class HomeViewModel {
                     let surveys = try JSONDecoder().decode(SurveyResponse.self, from: data)
                     self.surveys = surveys.surveys
                     self.state = .surveysLoaded
+                    self.visibleSurvey = self.surveys.first
                 } catch {
                     print(error.localizedDescription)
                     self.state = .errorLoading
