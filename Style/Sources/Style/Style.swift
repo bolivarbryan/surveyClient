@@ -4,17 +4,6 @@
 import UIKit
 import SnapKit
 
-public struct Style {
-    public init() {
-        
-    }
-    
-    public func printTest() {
-        print("Style")
-    }
-}
-
-
 public struct Language {
     public struct Login {
         public static let email = "Email"

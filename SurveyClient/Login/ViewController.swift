@@ -54,6 +54,13 @@ class ViewController: UIViewController {
         emailTextField.addTarget(self, action: #selector(updateEmailTextField), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(updatePasswordTextField), for: .editingChanged)
         button.addTarget(self, action: #selector(performLogin), for: .touchUpInside)
+        
+        #if DEBUG
+        emailTextField.text = "bolivarbryan@gmail.com"
+        passwordTextField.text = "12345678"
+        viewModel.email = "bolivarbryan@gmail.com"
+        viewModel.password = "12345678"
+        #endif
     }
     
     func prepareLayout() {

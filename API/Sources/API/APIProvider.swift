@@ -20,9 +20,9 @@ public struct APIProvider {
                 let data = moyaResponse.data
                 completion(data)
                 let statusCode = moyaResponse.statusCode
-                print("--> \(service.path): ", statusCode)
+                print("🟢 --> \(service.path): ", statusCode)
             case let .failure(error):
-                print(error.localizedDescription)
+                print("🔴 --> ", error.localizedDescription)
             }
         }
     }

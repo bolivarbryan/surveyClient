@@ -8,11 +8,14 @@
 import Foundation
 
 public struct Survey: Codable {
-    let title, description, thankEmailAboveThreshold, thankEmailBelowThreshold: String
-    let isActive: Bool
-    let coverImageURL: String
-    let createdAt, activeAt: String
-    let surveyType: String
+    public let title: String
+    public let description: String
+    public let thankEmailAboveThreshold: String
+    public let thankEmailBelowThreshold: String
+    public let isActive: Bool
+    public let coverImageURL: String
+    public let createdAt, activeAt: String
+    public let surveyType: String
 
     enum CodingKeys: String, CodingKey {
         case title, description

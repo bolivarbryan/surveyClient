@@ -93,17 +93,4 @@ class LoginViewModel {
             }
         }
     }
-    
-    func surveyList() {
-        APIProvider.request(service: .surveyList(page: 1)) { data in
-            DispatchQueue.main.async {
-                do {
-                    let surveys = try JSONDecoder().decode(SurveyResponse.self, from: data)
-                    print(surveys.surveys)
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-        }
-    }
 }
